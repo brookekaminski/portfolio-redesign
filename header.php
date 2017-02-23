@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brooke Kaminski | Web Designer/Developer </title>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
@@ -37,30 +38,9 @@
     <div class="border-right"></div>
     <div class="border-bottom"></div>
     <div class="border-left"></div>
+    </div> 
     
     
-    <div class="menu"> 
-       <span class="menu-circle"></span>
-        <a href="#" class="menu-link"><span class="menu-name">Menu</span><span class="menu-icon">
-                        <span class="menu-line menu-line-1"></span> <span class="menu-line menu-line-2"></span> <span class="menu-line menu-line-3"></span> </span>
-        </a>
-    </div>
-    <div class="menu-overlay">
-        <nav class="nav-main" id="nav-main">
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="#">Work</a></li>
-                <li><a href="about.php">About</a></li>
-                <li><a href="contact.php">Contact</a></li>
-            </ul>
-        </nav>
-        
-         <?php include('social.php'); ?>
-<!--
-          <div class="connect">
-          
-           <a href="mailto:hello@brookekaminski.ca">hello@brookekaminski.ca</a>
--->
-        </div>
-    </div>
+<header>
     <a class="logo" href="index.php"><h1><span>B</span>ro<br>o<span>K</span>e</h1></a>
+</header>

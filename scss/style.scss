@@ -9,47 +9,6 @@
 
 @import "reset";
 
-/* ------------------------------- */
-/* ---------- VARIABLES ---------- */
-/* ------------------------------- */
-
-@import 'vars';
-
-/* ------------------------------ */
-/* ----------- MIXINS ----------- */
-/* ------------------------------ */
-
-
-@import 'mixins';
-
-/* ------------------------------ */
-/* --------- NAVIGATION --------- */
-/* ------------------------------ */
-
-@import 'nav';
-
-/* ------------------------------ */
-/* ----------- LAYOUT ----------- */
-/* ------------------------------ */
-
-
-@import 'content';
-
-@import 'projects';
-
-@import 'about';
-
-@import 'general';
-
-
-@import 'animation';
-
-
-/* ------------------------------ */
-/* ------------ FORM ------------ */
-/* ------------------------------ */
-
-@import 'form';
 
 /* ------------------------------ */
 /* -------- ACCESSIBILITY ------- */
@@ -57,13 +16,66 @@
 
 @import 'accessibility';
 
+
 /* ------------------------------ */
-/* ----------- FOOTER ----------- */
+/* --------- TEMP STYLES -------- */
 /* ------------------------------ */
 
-@import 'footer';
+@import 'vars';
+
+body{
+    font-family: $sans;
+    line-height: 1.4;
+}
+
+header{
+    padding: 5%;
+    background: $text;
+}
+
+main{
+    margin: 15%;
+}
+
+a.logo{
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-size: 2em;
+    color: $dark;
+    
+    span{
+        color: $bg;
+    }
+}
 
 
+h2{
+    @include sans;
+}
+
+p{
+    margin: 20px 0;
+    font-family: $serif;
+}
 
 
+span.underline{
+    padding: 0px 25%;
+    border-bottom: 2px solid $text;
+}
 
+.intro{
+    span{
+        @include sans;
+    }
+}
+
+footer{
+    padding: 5%;
+    background: $text;
+    
+    a{
+        color: $bg;
+    }
+}
