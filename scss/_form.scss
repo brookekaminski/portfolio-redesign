@@ -1,0 +1,42 @@
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+form {
+    margin: 25px 0;
+}
+
+input[type='text'],
+textarea {
+    margin-bottom: 20px;
+    width: 100%;
+    background: none;
+    border: none;
+    border-radius: 0;
+    letter-spacing: 1px;
+    font-size: .9em;
+    color: $text;
+    border-bottom: 2px solid $text;
+}
+
+input[type="submit"] {
+    float: right;
+    display: inline-block;
+    padding: 10px 40px;
+    background: none;
+    outline: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    cursor: pointer;
+    @include sans;
+    font-size: 1.1em;
+    color: $text;
+    border: 2px solid $text;
+    transition: .3s ease;
+    &:hover {
+        background: $text;
+        color: $bg;
+    }
+}

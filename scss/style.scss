@@ -4,78 +4,278 @@
 
 
 /* ------------------------------- */
+
+
 /* ------------ RESET ------------ */
+
+
 /* ------------------------------- */
 
 @import "reset";
 
-
 /* ------------------------------ */
+
+
 /* -------- ACCESSIBILITY ------- */
+
+
 /* ------------------------------ */
 
 @import 'accessibility';
 
-
-/* ------------------------------ */
-/* --------- TEMP STYLES -------- */
-/* ------------------------------ */
+/* ------------------------------ 
+          TEMP STYLES
+-------------------------------- */
 
 @import 'vars';
-
-body{
-    font-family: $sans;
-    line-height: 1.4;
-}
-
-header{
-    padding: 5%;
-    background: $text;
-}
-
-main{
-    margin: 15%;
-}
-
-a.logo{
-    text-decoration: none;
-    text-transform: uppercase;
-    line-height: 1.2;
-    font-size: 2em;
-    color: $dark;
-    
-    span{
-        color: $bg;
+.border-top {
+    @include border-h;
+    top: 0;
+    @media #{$medium-width} {
+        @include border-h(10px);
     }
 }
 
-
-h2{
-    @include sans;
+.border-right {
+    @include border-v;
+    right: 0;
+    @media #{$medium-width} {
+        @include border-v(10px);
+    }
 }
 
-p{
-    margin: 20px 0;
+.border-bottom {
+    @include border-h;
+    bottom: 0;
+    @media #{$medium-width} {
+        @include border-h(10px);
+    }
+}
+
+.border-left {
+    @include border-v;
+    left: 0;
+    @media #{$medium-width} {
+        @include border-v(10px);
+    }
+}
+
+/* ------------------------------ 
+            GENERAL
+-------------------------------- */
+
+body {
+    font-family: $sans;
+    line-height: 1.5;
+}
+
+header {
+    padding: 5%;
+    @media #{$medium-width} {
+        background: $text;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $text;
+}
+
+p {
+    text-align: justify;
+}
+
+a.logo {
+    display: inline-block;
+    @include sans(.4em, 500);
+    line-height: 1.2;
+    font-size: 1.8em;
+    color: $light;
+    transition: .3s ease;
+    &:hover {
+        color: $text;
+    }
+    @media #{$medium-width} {
+        color: $dark;
+        &:hover {
+            color: $bg;
+        }
+    }
+    span {
+        color: $text;
+        transition: .3s ease;
+        @media #{$medium-width} {
+            color: $bg;
+        }
+    }
+}
+
+h2 {
+    display: inline-block;
+    margin-left: 35%;
+    @include sans (.2em);
+    text-align: center;
+    font-size: 1.35em;
+    @media #{$medium-width} {
+        margin-left: 25%;
+    }
+}
+
+p {
+    margin: 30px 0;
     font-family: $serif;
+    font-size: 1.05em;
+    color: $dark;
 }
 
-
-span.underline{
+span.underline {
+    margin-left: 39%;
     padding: 0px 25%;
     border-bottom: 2px solid $text;
 }
 
-.intro{
-    span{
-        @include sans;
+/* ------------------------------ 
+          HOME - INTRO
+-------------------------------- */
+
+.intro {
+    margin: 75px 15%;
+    @media #{$small-width} {
+        margin: 100px 15%;
+    }
+    
+    @media #{$medium-width} {
+        display: flex;
+        justify-content: space-between;
+        margin: 75px 0;
+        
+        .intro-container{
+            width: calc((100%/3)) ;
+            margin-right: 5%;
+        }
+    }
+    span {
+        @include sans(.1em, 500);
+        color: $text;
+    }
+    a {
+        border-bottom: 2px solid $text;
     }
 }
 
-footer{
+/* ------------------------------ 
+          HOME - PROJECTS
+-------------------------------- */
+
+.projects {
+    
+    @media #{$medium-width} {
+        display: flex;
+        flex-direction: row-reverse;
+        .project-intro {
+            flex: 1 0 0;
+        }
+        .previews {
+            flex: 1 0 0;
+        }
+    }
+}
+
+.project-intro {
+    padding: 50px 15%;
+    background: $text;
+    color: $bg;
+      @media #{$small-width} {
+        padding: 100px 15%;
+    }
+        @media #{$medium-width} {
+            padding: 75px 5%;
+    }
+    span.underline {
+        border-bottom: 2px solid $bg;
+    }
+    p {
+        color: $light;
+    }
+}
+
+.previews {
+    display: flex;
+    flex-wrap: wrap;
+    .col {
+        background: $bg;
+        flex: 0 1 50%;
+        text-align: center;
+//        border-bottom: 2px solid $text;
+//        &:nth-child(even) {
+//            border-left: 2px solid $text;
+//        }
+    }
+    .box {
+        background-image: url('../images/group-project.jpg');
+        background-size: cover;
+        position: relative;
+        height: 0;
+        padding-top: 100%;
+    }
+    
+    .text{
+        padding: 5%;
+    }
+    
+    .box img,
+    .box .text {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $bg;
+        color: $text;
+        opacity: 0;
+        transition: opacity .25s ease;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+
+/* ------------------------------ 
+          HOME - CONTACT
+-------------------------------- */
+
+.contact {
+    margin: 75px 15% 100px;
+    @media #{$small-width} {
+        margin: 85px 15% 115px;
+    }
+    a {
+        display: block;
+        text-align: center;
+    }
+}
+
+@import 'form';
+
+footer {
     padding: 5%;
     background: $text;
-    
-    a{
+    a {
         color: $bg;
+    }
+}
+
+ul.social {
+    display: flex;
+    margin-top: 20px;
+    .fa {
+        margin: 0 1em 0 .75em;
+        color: $bg;
+        transition: .3s ease;
+        &:hover {
+            cursor: pointer;
+            color: $dark;
+        }
     }
 }

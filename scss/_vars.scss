@@ -4,19 +4,37 @@ $text: #1A1A1A;
 $light: #EEE;
 $dark: #606060;
 
-$sans: 'Good Headline Pro', sans-serif;
+$sans: "ff-good-headline-web-pro-con", sans-serif;
 
-$serif: 'Crimson Text';//'FreightBig Pro';// 
+$serif: 'Crimson Text', serif;
 
-$smaller-width: "screen and (min-width: 480px)";
+$small-width: "screen and (min-width: 525px)";
 
 $medium-width: "screen and (min-width: 768px)";
 
-$large-width: "screen and (min-width: 960px)";
+$large-width: "screen and (max-width: 1150px)";
 
-@mixin sans{
+@mixin sans($space: .1em, $weight: 900){
     font-family: $sans;
     text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: .1em;
+    font-weight: $weight;
+    letter-spacing: $space;
+}
+
+@mixin border-h($thickness: 0px) {
+    z-index: 10;
+    position: fixed;
+    height: $thickness;
+    width: 100%;
+    background-color: $text;
+    transition: .5s ease;
+}
+
+@mixin border-v($thickness: 0px) {
+    z-index: 9;
+    position: fixed;
+    height: 100%;
+    width: $thickness;
+    background-color: $text;
+    transition: .5s ease;
 }
