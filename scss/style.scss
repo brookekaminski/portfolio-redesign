@@ -69,12 +69,6 @@ body {
     line-height: 1.5;
 }
 
-header {
-    padding: 5%;
-    @media #{$medium-width} {
-        background: $text;
-    }
-}
 
 a {
     text-decoration: none;
@@ -87,6 +81,7 @@ p {
 
 a.logo {
     display: inline-block;
+    margin: 20px;
     @include sans(.4em, 500);
     line-height: 1.2;
     font-size: 1.8em;
@@ -95,6 +90,7 @@ a.logo {
     &:hover {
         color: $text;
     }
+    
     @media #{$medium-width} {
         color: $dark;
         &:hover {
@@ -212,8 +208,11 @@ span.underline {
 //        }
     }
     .box {
-        background-image: url('../images/group-project.jpg');
-        background-size: cover;
+        background:{
+            image: url('../images/group-project.jpg');
+            size: cover;
+            repeat: no-repeat;
+        }
         position: relative;
         height: 0;
         padding-top: 100%;
@@ -256,10 +255,25 @@ span.underline {
     }
 }
 
+/* ------------------------------ 
+          HOME - FORM
+-------------------------------- */
+
 @import 'form';
 
+/* ------------------------------ 
+          NAVIGATION
+-------------------------------- */
+
+@import 'nav';
+
+
+/* ------------------------------ 
+           FOOTER
+-------------------------------- */
+
 footer {
-    padding: 5%;
+    padding: 25px 5% 100px;
     background: $text;
     a {
         color: $bg;

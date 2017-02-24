@@ -52,6 +52,7 @@
                         </a>
                     </div>
                 </div>
+                
             </div>
         </div>
         <div class="contact">
@@ -72,4 +73,5 @@
             </div>
         </div>
     </main>
+    
     <?php include('footer.php'); ?>
