@@ -4,10 +4,10 @@
             <div class="intro-container">
                 <h2>Hey There</h2> <span class="underline"></span> </div>
             <div class="intro-container">
-                <p><span>What I'm About </span>I'm a freshly carved web designer/developer who just graduated in March 2017 from BCIT's Technical Web Designer program in Vancouver, BC. But I've made my way over to Toronto to experience life in a new city.</p>
+                <p><span>What I'm About </span>I'm a freshly created web designer/developer who just graduated in March 2017 from BCIT's Technical Web Designer program in Vancouver, BC. But I've made my way over to Toronto to experience life in a new city.</p>
             </div>
             <div class="intro-container">
-                <p>I walk the line between developing and design. I have a passion for accessible, clean code that not only functions smoothly but also looks and feels good to use. If for some reason this is interesting to you, why not <a href="#">read more</a>...</p>
+                <p>I walk the line between developing and design. I have a passion for accessible, clean code that not only functions smoothly but also looks and feels good to use. If for some reason this is interesting to you, why not <a href="#">read more<span class="screen-reader-text"> link to about page</span></a>...</p>
             </div>
         </div>
         <div class="projects">
@@ -19,13 +19,14 @@
                 <div class="col">
                     <div class="box">
                         <a href="#">
+                           <span class="screen-reader-text"> link to client project details page</span>
                             <div class="text">
                                 
                                 <h3>Client Project</h3>
                                 
                                 <p>Bella Coastal Events site redesign with team of 3.</p>
                                 
-                                <button>View Details</button>
+                                <button>View Details<span class="screen-reader-text"> of client project</span></button>
                                 
                             </div>
                         </a>
@@ -57,7 +58,7 @@
         </div>
         <div class="contact">
             <h2>Get in Touch</h2> <span class="underline"></span>
-            <p>I hope you were able to get to know me a little better through here but if you want to find out more then I'd love to hear from you!</p> <a href="mailto:hello@brookekaminski.ca">hello@brookekaminski.ca</a>
+            <p>I hope you were able to get to know me a little better through here but if you want to find out more then I'd love to hear from you!</p> <a href="mailto:hello@brookekaminski.ca">hello@brookekaminski.ca<span class="screen-reader-text"> to email message</span></a>
             <div class="form">
                 <form method="post" action="submit.php">
                     <label for="name"></label>

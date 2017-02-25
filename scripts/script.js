@@ -3,7 +3,7 @@
 // hide on scroll
 var didScroll;
 var lastScrollTop = 0;
-var navbarHeight = $('.bottom-nav').outerHeight();
+var navbarHeight = $('nav').outerHeight();
 
 $(window).scroll(function(event){
     didScroll = true;
@@ -26,19 +26,13 @@ function hasScrolled() {
     // This is necessary so you never see what is "behind" the navbar.
     if (st > lastScrollTop && st > navbarHeight){
         // Scroll Down
-        $('.bottom-nav').removeClass('nav-down').addClass('nav-up');
+        $('nav').removeClass('nav-down').addClass('nav-up');
     } else {
         // Scroll Up
         if(st + $(window).height() < $(document).height()) {
-            $('.bottom-nav').removeClass('nav-up').addClass('nav-down');
+            $('nav').removeClass('nav-up').addClass('nav-down');
         }
     }
     
     lastScrollTop = st;
 }
-
-
-// reveal popup horizontal scroll nav 
-$('#menu-popup').click(function(){
-    $('.popup-nav').toggleClass('show-nav');
-});

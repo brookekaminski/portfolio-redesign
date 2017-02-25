@@ -21,13 +21,13 @@
 
 /* ------------------------------ */
 
+@import 'vars';
 @import 'accessibility';
 
 /* ------------------------------ 
           TEMP STYLES
 -------------------------------- */
 
-@import 'vars';
 .border-top {
     @include border-h;
     top: 0;
@@ -60,6 +60,7 @@
     }
 }
 
+
 /* ------------------------------ 
             GENERAL
 -------------------------------- */
@@ -69,7 +70,11 @@ body {
     line-height: 1.5;
 }
 
-
+//.wrapper{
+//    @media #{$large-width} {
+//        max-width: 960px;
+//    }
+//}
 a {
     text-decoration: none;
     color: $text;
@@ -90,7 +95,6 @@ a.logo {
     &:hover {
         color: $text;
     }
-    
     @media #{$medium-width} {
         color: $dark;
         &:hover {
@@ -130,6 +134,13 @@ span.underline {
     border-bottom: 2px solid $text;
 }
 
+
+/* ------------------------------ 
+          NAVIGATION
+-------------------------------- */
+
+@import 'nav';
+
 /* ------------------------------ 
           HOME - INTRO
 -------------------------------- */
@@ -139,14 +150,12 @@ span.underline {
     @media #{$small-width} {
         margin: 100px 15%;
     }
-    
     @media #{$medium-width} {
         display: flex;
         justify-content: space-between;
         margin: 75px 0;
-        
-        .intro-container{
-            width: calc((100%/3)) ;
+        .intro-container {
+            width: calc((100%/3));
             margin-right: 5%;
         }
     }
@@ -159,12 +168,12 @@ span.underline {
     }
 }
 
+
 /* ------------------------------ 
           HOME - PROJECTS
 -------------------------------- */
 
 .projects {
-    
     @media #{$medium-width} {
         display: flex;
         flex-direction: row-reverse;
@@ -181,11 +190,11 @@ span.underline {
     padding: 50px 15%;
     background: $text;
     color: $bg;
-      @media #{$small-width} {
+    @media #{$small-width} {
         padding: 100px 15%;
     }
-        @media #{$medium-width} {
-            padding: 75px 5%;
+    @media #{$medium-width} {
+        padding: 75px 5%;
     }
     span.underline {
         border-bottom: 2px solid $bg;
@@ -202,26 +211,24 @@ span.underline {
         background: $bg;
         flex: 0 1 50%;
         text-align: center;
-//        border-bottom: 2px solid $text;
-//        &:nth-child(even) {
-//            border-left: 2px solid $text;
-//        }
+        border-bottom: 2px solid $text;
+        &:nth-child(even) {
+            border-left: 2px solid $text;
+        }
+        @media #{$medium-width} {
+            &:nth-child(-n+2) {
+                border-top: 2px solid $text;
+            }
+        }
     }
     .box {
-        background:{
-            image: url('../images/group-project.jpg');
-            size: cover;
-            repeat: no-repeat;
-        }
         position: relative;
         height: 0;
         padding-top: 100%;
     }
-    
-    .text{
+    .text {
         padding: 5%;
     }
-    
     .box img,
     .box .text {
         display: block;
@@ -232,13 +239,9 @@ span.underline {
         height: 100%;
         background: $bg;
         color: $text;
-        opacity: 0;
-        transition: opacity .25s ease;
-        &:hover{
-            opacity: 1;
-        }
     }
 }
+
 
 /* ------------------------------ 
           HOME - CONTACT
@@ -255,6 +258,7 @@ span.underline {
     }
 }
 
+
 /* ------------------------------ 
           HOME - FORM
 -------------------------------- */
@@ -262,10 +266,34 @@ span.underline {
 @import 'form';
 
 /* ------------------------------ 
-          NAVIGATION
+            ABOUT
 -------------------------------- */
 
-@import 'nav';
+.about-page {
+    margin: 75px 15%;
+    @media #{$medium-width} {
+        margin: 75px 2.5%;
+        img {
+            margin-left: 5%;
+            width: 75%;
+        }
+    }
+}
+
+.about {
+    @media #{$medium-width} {
+        display: flex;
+        p {
+            margin: 30px 2.5%;
+        }
+    }
+}
+
+/* ------------------------------ 
+           WORK
+-------------------------------- */
+
+@import 'work';
 
 
 /* ------------------------------ 

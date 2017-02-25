@@ -28,30 +28,25 @@
     <div class="border-top"></div>
     <div class="border-right"></div>
     <div class="border-bottom"></div>
-    <div class="border-left"></div>
-   
+    <div class="border-left"></div>  
+    
 
-   
     
 <header>
+   
     <a class="logo" href="index.php"><h1><span>B</span>ro<br>o<span>K</span>e</h1></a>
 
-
-    <div class="fixed">
      
-             <div class="bottom-nav nav-down">
-            <button id="menu-popup">Menu</button>
-        </div>
-     
-      <nav class="popup-nav"> 
+      <nav class="fixed nav-down"> 
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="#">Work</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="about.php">About</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
         </nav>
 
     
    </div>
+   
 </header>
