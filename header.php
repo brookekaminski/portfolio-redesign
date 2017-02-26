@@ -33,11 +33,15 @@
 
     
 <header>
+  
+  <div class="contain">
    
     <a class="logo" href="index.php"><h1><span>B</span>ro<br>o<span>K</span>e</h1></a>
 
      
-      <nav class="fixed nav-down"> 
+    <div class="fixed">
+     
+      <nav class="popup-nav"> 
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="#">Work</a></li>
@@ -48,5 +52,6 @@
 
     
    </div>
-   
+
+   </div>
 </header>

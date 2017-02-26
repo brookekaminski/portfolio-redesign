@@ -36,3 +36,12 @@ function hasScrolled() {
     
     lastScrollTop = st;
 }
+
+// reveal popup horizontal scroll nav 
+$('#menu-popup').on('click', function(){
+    
+    var $this = $(this);
+    
+    $('.popup-nav').toggleClass('show-nav');
+		$this.attr( 'aria-expanded', $this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+});

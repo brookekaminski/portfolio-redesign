@@ -70,11 +70,11 @@ body {
     line-height: 1.5;
 }
 
-//.wrapper{
-//    @media #{$large-width} {
-//        max-width: 960px;
-//    }
-//}
+.contain{
+    @media #{$large-width} {
+        max-width: 960px;
+    }
+}
 a {
     text-decoration: none;
     color: $text;
@@ -134,6 +134,11 @@ span.underline {
     border-bottom: 2px solid $text;
 }
 
+span.bold {
+    @include sans(.1em, 500);
+    color: $text;
+}
+
 
 /* ------------------------------ 
           NAVIGATION
@@ -154,14 +159,19 @@ span.underline {
         display: flex;
         justify-content: space-between;
         margin: 75px 0;
-        .intro-container {
-            width: calc((100%/3));
-            margin-right: 5%;
+        @media #{$large-width} {
+            margin: 100px 0;
         }
-    }
-    span {
-        @include sans(.1em, 500);
-        color: $text;
+        .intro-container {
+//            width: calc((100%/2));
+            margin-right: 10%;
+            &:first-child{
+                flex: 1 0 0;
+            }
+            &:last-child{
+                flex: 2 0 0;
+            }
+        }
     }
     a {
         border-bottom: 2px solid $text;
@@ -181,7 +191,10 @@ span.underline {
             flex: 1 0 0;
         }
         .previews {
+            flex: 2 0 0;
+            @media #{$large-width} {
             flex: 1 0 0;
+        }
         }
     }
 }
@@ -194,8 +207,11 @@ span.underline {
         padding: 100px 15%;
     }
     @media #{$medium-width} {
-        padding: 75px 5%;
+        padding: 50px 10%;
     }
+    @media #{$large-width} {
+            padding: 75px 10%;
+        }
     span.underline {
         border-bottom: 2px solid $bg;
     }
@@ -289,12 +305,12 @@ span.underline {
     }
 }
 
+
 /* ------------------------------ 
            WORK
 -------------------------------- */
 
 @import 'work';
-
 
 /* ------------------------------ 
            FOOTER
