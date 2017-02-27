@@ -19,39 +19,40 @@
     </script>
 </head>
 
-<body> 
+<body class="wrapper"> 
   
   
   <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
    
    
+<!--
     <div class="border-top"></div>
     <div class="border-right"></div>
     <div class="border-bottom"></div>
     <div class="border-left"></div>  
+-->
     
 
-    
+  <div class="dark-contain-h">  
 <header>
   
-  <div class="contain">
+
    
     <a class="logo" href="index.php"><h1><span>B</span>ro<br>o<span>K</span>e</h1></a>
 
      
-    <div class="fixed">
      
-      <nav class="popup-nav"> 
+      <nav class="nav"> 
         <ul>
             <li><a href="index.php">Home</a></li>
-            <li><a href="#">Work</a></li>
+            <li><a href="#">Work</a>
+            </li>
             <li><a href="about.php">About</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
         </nav>
 
-    
-   </div>
 
-   </div>
+
 </header>
+   </div> <!-- END OF DARK CONTAIN -->

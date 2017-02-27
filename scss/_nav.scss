@@ -1,62 +1,51 @@
-header {
-    @media #{$small-width} {
-        display: flex;
-        justify-content: space-between;
-    }
-    @media #{$medium-width} {
-        background: $text;
-    }
-}
-
-.fixed {
+.nav {
+    z-index: 930;
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 930;
+    transition: height .3s linear;
     @media #{$small-width} {
         position: absolute;
         top: 20px;
         right: 20px;
+        height: 0;
+        width: 0;
     }
-}
-
-.popup-nav {
     ul {
         display: flex;
         justify-content: flex-end;
-//        height: 0;
         transition: .3s ease;
-        
-        li{
-            flex: 1 1 100%;  
+        li {
+            flex: 1 1 100%;
             @media #{$small-width} {
                 flex: 0 1 auto;
             }
-        a {
-            background-color: #f8f8f8;
-            display: block;
-            padding: 20px 35px;
-            text-decoration: none;
-            text-align: center;
-            border-right: 1px solid $light;
-            border-top: 1px solid $light;
-            transition: .3s ease;
-            @media #{$small-width} {
-                padding: 20px;
-                border: none;
-                background-color: transparent;
-            }
-            @media #{$medium-width} {
-                color: $bg;
-            }
-            &:hover {
-                background-color: $light;
+            a {
+                background-color: #f8f8f8;
+                display: block;
+                padding: 20px 35px;
+                text-decoration: none;
+                text-align: center;
+                text-transform: lowercase;
+                border-right: 1px solid $light;
+                border-top: 1px solid $light;
+                transition: .3s ease;
                 @media #{$small-width} {
+                    padding: 20px;
+                    border: none;
                     background-color: transparent;
-                    color: $light;
+                }
+                @media #{$medium-width} {
+                    color: $bg;
+                }
+                &:hover {
+                    background-color: $light;
+                    @media #{$small-width} {
+                        background-color: transparent;
+                        color: $light;
+                    }
                 }
             }
-        }
         }
     }
 }
@@ -69,26 +58,6 @@ header {
     height: 60px;
 }
 
-.nav-up{
+.nav-up {
     height: 0;
-}
-
-.bottom-nav {
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    background-color: $bg;
-    border-top: 2px solid $text;
-    transition: top 0.2s ease-in-out;
-    button {
-        background-color: transparent;
-        border: none;
-        @include sans (.2em);
-        //        font-size: 1em;
-        color: $text;
-    }
-    @media #{$small-width} {
-        display: none;
-        justify-content: flex-end;
-    }
 }

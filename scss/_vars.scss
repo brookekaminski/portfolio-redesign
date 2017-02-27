@@ -14,6 +14,8 @@ $medium-width: "screen and (min-width: 768px)";
 
 $large-width: "screen and (min-width: 960px)";
 
+$max-width: "screen and (min-width: 1200px)";
+
 @mixin sans($space: .1em, $weight: 900){
     font-family: $sans;
     text-transform: uppercase;
@@ -37,4 +39,19 @@ $large-width: "screen and (min-width: 960px)";
     width: $thickness;
     background-color: $text;
     transition: .5s ease;
+}
+
+@mixin button{
+    float: right;
+    display: inline-block;
+    padding: 10px 40px;
+    background: none;
+    font-size: 1.1em;
+    color: $text;
+    border: 2px solid $text;
+    transition: .3s ease;
+    &:hover {
+        background: $text;
+        color: $bg;
+    }
 }

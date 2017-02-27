@@ -1,11 +1,25 @@
-.title{
+.title {
     margin: 75px 0 0;
 }
 
-.project-desc{
+.project-desc {
     margin: 0 15%;
+    
+    a{
+        @include button;
+        @include sans;
+        margin-bottom: 20px;
+    }
 }
 
-img.screenshots{
-    width: 70%;
+.screenshots {
+    margin: 50px 15%;
+    img {
+        @media #{$small-width} {
+            margin-bottom: 10px;
+        }
+        @media #{$medium-width} {
+            margin-bottom: 20px;
+        }
+    }
 }
