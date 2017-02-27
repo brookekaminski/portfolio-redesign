@@ -45,6 +45,12 @@
                         color: $light;
                     }
                 }
+                @media #{$max-width} {
+                    color: $text;
+                    &:hover{
+                        color: $light;
+                    }
+                } 
             }
         }
     }

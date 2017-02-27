@@ -114,11 +114,20 @@ a.logo {
             color: $bg;
         }
     }
+    @media #{$max-width} {
+        color: $light;
+        &:hover {
+            color: $text;
+        }
+    }
     span {
         color: $text;
         transition: .3s ease;
         @media #{$medium-width} {
             color: $bg;
+        }
+        @media #{$max-width} {
+            color: $text;
         }
     }
 }
@@ -165,6 +174,9 @@ span.bold {
 //     @media #{$medium-width} {
 //    background: $text;
 //    }
+//}
+//.dark-contain-h {
+//    border-bottom: 2px solid $text;
 //}
 //
 //.dark-contain{
@@ -234,12 +246,12 @@ span.bold {
             }
         }
     }
-     @media #{$max-width} {
-         background-color: $bg;
-         color: $text;
-            margin: 100px auto;
-            max-width: 1200px;
-        }
+    @media #{$max-width} {
+        background-color: $bg;
+        color: $text;
+        margin: 100px auto;
+        max-width: 1200px;
+    }
 }
 
 .project-intro {
@@ -255,9 +267,9 @@ span.bold {
     }
     span.underline {
         border-bottom: 2px solid $bg;
-    }
-    p {
-        color: $light;
+        @media #{$max-width} {
+            border-bottom: 2px solid $text;
+        }
     }
 }
 
@@ -318,7 +330,7 @@ span.bold {
         display: flex;
         margin: 85px 10% 115px 7%;
     }
-        @media #{$max-width} {
+    @media #{$max-width} {
         margin: 85px auto 115px;
         max-width: 1200px;
     }
@@ -332,7 +344,7 @@ span.bold {
     @media #{$medium-width} {
         flex: 1 0 0;
     }
-       @media #{$large-width} {
+    @media #{$large-width} {
         flex: 2 0 0;
     }
 }
@@ -343,9 +355,7 @@ span.bold {
 -------------------------------- */
 
 .form {
-    
     padding-top: 30px;
-    
     @media #{$medium-width} {
         flex: 2 0 0;
         padding-left: 10%;
@@ -382,12 +392,16 @@ span.bold {
 footer {
     padding: 25px 5% 100px;
     background: $text;
+    @media #{$max-width} {
+        background-color: $bg;
+    }
     a {
         color: $bg;
+        @media #{$max-width} {
+            color: $text;
+        }
     }
-            @media #{$max-width} {
-                background-color: $bg;
-                color: $text;
+    @media #{$max-width} {
         margin: 0 auto;
         max-width: 1200px;
     }

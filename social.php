@@ -1,6 +1,6 @@
 <ul class="social">
     <li> 
-        <a href="www.linkedin.com/in/brookemkaminski" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i><span class="screen-reader-text">link to linked in</span></a> 
+        <a href="http://www.linkedin.com/in/brooke-kaminski" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i><span class="screen-reader-text">link to linked in</span></a> 
     </li>
     <li>
         <a href="http://codepen.io/brookekaminski/" target="_blank"><i class="fa fa-codepen" aria-hidden="true"></i><span class="screen-reader-text">link to code pen</span></a> 
