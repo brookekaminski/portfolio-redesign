@@ -4,6 +4,7 @@ textarea {
     font: inherit;
 }
 
+// form styles
 input[type='text'],
 textarea {
     margin-bottom: 20px;
@@ -17,22 +18,14 @@ textarea {
     border-bottom: 2px solid $text;
 }
 
+// submit button fixed for ios
 input[type="submit"] {
-    float: right;
-    display: inline-block;
-    padding: 10px 40px;
-    background: none;
     outline: none;
     -webkit-appearance: none;
+    appearance: none;
     border-radius: 0;
     cursor: pointer;
+    @include button;
     @include sans;
-    font-size: 1.1em;
-    color: $text;
-    border: 2px solid $text;
-    transition: .3s ease;
-    &:hover {
-        background: $text;
-        color: $bg;
-    }
+    @include transition;
 }

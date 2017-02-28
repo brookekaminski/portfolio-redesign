@@ -27,15 +27,6 @@ body {
     line-height: 1.5;
 }
 
-a {
-    text-decoration: none;
-    color: $text;
-}
-
-p {
-    text-align: justify;
-}
-
 header {
     background:{
         image: url('../images/header-test.png');
@@ -43,11 +34,13 @@ header {
         size: cover;
     }
     position: relative;
-    transition: .3s ease;
+    @include transition;
     @media #{$small-width} {
-        background: none;
         display: flex;
         justify-content: space-between;
+    }
+    @media #{$large-width}{
+        background: none;
     }
     @media #{$max-width} {
         margin: 0 auto;
@@ -55,27 +48,37 @@ header {
     }
 }
 
-a.logo {
-    display: inline-block;
-    margin: 20px;
-    @include sans(.4em, 500);
-    line-height: 1.2;
-    font-size: 1.8em;
-    color: $light;
-    transition: .3s ease;
-    &:hover {
-        color: $text;
-    }
-    span {
-        color: $text;
-        transition: .3s ease;
-    }
+a {
+    text-decoration: none;
+    color: $text;
 }
 
 .clear{
     clear: both;
 }
 
+/* ------------------------------ 
+            LOGO
+-------------------------------- */
+
+a.logo {
+    display: inline-block;
+    margin: 20px;
+    @include sans(.4em, 500);
+    line-height: 1.2;
+    font-size: 1.8em;
+    color: rgba($color, .1); //$light;
+    @include transition;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $text;
+    }
+    span {
+        color: $text;
+        @include transition;
+    }
+}
 
 /* ------------------------------ 
           TEXT
@@ -103,6 +106,7 @@ h3.view{
 p {
     margin: 30px 0;
     font-family: $serif;
+    text-align: justify;
     font-size: 1.05em;
 }
 
@@ -110,7 +114,7 @@ span.underline {
     display: flex;
     width: 100px;
     margin: 20px 50%;
-    border-bottom: 2px solid $text;
+    border-bottom: 7px solid rgba($color, .3);
     @media #{$small-width} {
         width: 150px;
         margin: 20px 40%;
@@ -169,6 +173,13 @@ span.bold {
     }
     a {
         border-bottom: 2px solid $text;
+        @include transition;
+        &:hover,
+        &:active,
+        &:focus{
+            color: $color;
+            border-bottom: 2px solid $color;
+        }
     }
 }
 
@@ -244,26 +255,18 @@ span.bold {
            FOOTER
 -------------------------------- */
 
-.dark-contain{
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    background-color: $text;
-}
-
 footer {
+    border-top: 7px solid rgba($color, .3);
     width: 100%;
     padding: 25px 5% 50px;
-    background: $text;
-    color: $bg;
-//    @media #{$max-width} {
-//        background-color: $bg;
-//    }
+//    background: rgba($color, .3);
+    color: $text;
+    @media #{$small-width} {
+        display: flex;
+        justify-content: space-between;
+    }
     a {
-        color: $bg;
-//        @media #{$max-width} {
-//            color: $text;
-//        }
+        color: $text;
     }
     @media #{$max-width} {
         margin: 0 auto;
@@ -276,15 +279,31 @@ ul.social {
     margin-top: 20px;
     .fa {
         margin: 0 1em 0 .75em;
-        color: $bg;
-        transition: .3s ease;
-        &:hover {
+        color: $text;
+        @include transition;
+        font-size: 1.2em;
+        &:hover,
+        &:active,
+        &:focus {
             cursor: pointer;
-            color: $dark;
+            color: rgba($color, .3);
+            transform: scale(1.2);
+            
         }
     }
 }
 
 .connect{
+    margin-left: 10px;
     padding: 20px 0;
+    a{
+        border-bottom: 2px solid $text;
+        @include transition;
+        &:hover, 
+        &:active,
+        &:focus{
+             color: $color;
+             border-bottom: 2px solid $color;
+        }
+    }
 }

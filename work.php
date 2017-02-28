@@ -14,6 +14,8 @@ include 'header.php';
 
                 <a href="london-fog.php">London Fog Blog</a>
                 <a href="landing-page.php">Landing Page</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Client Project</a>
 
                 </section>
             

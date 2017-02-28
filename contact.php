@@ -1,4 +1,5 @@
 <?php include ('header.php'); ?>
+       <main id="content" class="content">
     <section class="contact" id="contact">
             <div class="contact-intro">
                 <h2>Get in Touch</h2> <span class="underline"></span>
@@ -17,4 +18,5 @@
                     <input type="submit" name="submit" value="Send" class="submit" /> </form>
             </div>
         </section>
+</main>
 <?php include('footer.php'); ?>

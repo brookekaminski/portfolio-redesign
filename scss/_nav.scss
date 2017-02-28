@@ -3,6 +3,8 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+    -webkit-transition: height .3s linear;
+    -o-transition: height .3s linear;
     transition: height .3s linear;
     @media #{$small-width} {
         position: absolute;
@@ -29,7 +31,7 @@
                 text-transform: lowercase;
                 border-right: 1px solid $light;
                 border-top: 1px solid $light;
-                transition: .3s ease;
+                @include transition;
                 @media #{$small-width} {
                     padding: 20px;
                     border: none;
@@ -38,11 +40,13 @@
                 @media #{$medium-width} {
                     color: $text;
                 }
-                &:hover {
+                &:hover,
+                &:active,
+                &:focus {
                     background-color: $light;
                     @media #{$small-width} {
                         background-color: transparent;
-                        color: $light;
+                        color: rgba($color, .3);
                     }
                 }
             }
@@ -61,3 +65,4 @@
 .nav-up {
     height: 0;
 }
+

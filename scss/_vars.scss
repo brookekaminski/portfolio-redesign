@@ -1,12 +1,11 @@
 $bg: #FFF;
 $text: #1A1A1A;
+$color: #4175C0;
 
 $light: #EEE;
-$dark: #606060;
+$white: #F8F8F8;
 
-$white: #f8f8f8;
-
-$sans: "ff-good-headline-web-pro-con", 'Good Headline Pro', sans-serif;
+$sans: "ff-good-headline-web-pro-con", 'Good Headline Pro', 'Open Sans Condensed', sans-serif;
 
 $serif: 'Crimson Text', serif;
 
@@ -34,8 +33,16 @@ $max-width: "screen and (min-width: 1200px)";
     color: $text;
     border: 2px solid $text;
     transition: .3s ease;
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus{
         background: $text;
         color: $bg;
     }
+}
+
+@mixin transition{
+    -webkit-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease;
 }

@@ -1,23 +1,26 @@
+// project title 
 .title {
     margin: 75px 0 0;
 }
 
+// toolkit 
 span.tools {
     float: right;
     font-size: .9em;
-    //    color: cornflowerblue;
 }
 
 .project-desc {
     margin: 0 15%;
 }
 
+// view live button
 .button {
     @include button;
     @include sans;
     margin-bottom: 20px;
 }
 
+// images of work 
 .screenshots {
     margin: 75px 15% 50px;
     img {
@@ -30,6 +33,7 @@ span.tools {
     }
 }
 
+// mobile images
 .mobile {
     @media #{$small-width} {
         display: flex;
@@ -38,23 +42,41 @@ span.tools {
     }
 }
 
+// next previous links
 .next-prev {
     display: flex;
     justify-content: space-between;
     margin: 0 15% 50px;
     a {
         border-bottom: 2px solid $text;
+        @include transition;
+        &:hover{
+            color: $color;
+            border-bottom: 2px solid $color;
+        }
     }
 }
 
+// gallery of work
 .gallery {
-    display: flex;
-    flex-direction: column;
-    margin: 50px 15%;
-    img {
-        margin-bottom: 20px;
+    a{
+        display: flex;
+        margin: 20px 0;
+        padding: 20px;
+        @include sans;
+//        border: 7px solid rgba($color, .3);
+        @include transition;
         @media #{$medium-width} {
-            width: 50%;
+            width: 80%;
         }
+        &:hover,
+        &:active,
+        &:focus{
+            background-color: rgba($color, .3);
+//            color: $bg;
+//            border: 7px solid transparent;
+        }
+    
     }
+    margin: 75px 15% 100px;
 }
