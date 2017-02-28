@@ -23,17 +23,7 @@
   
   
   <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
-   
-   
-<!--
-    <div class="border-top"></div>
-    <div class="border-right"></div>
-    <div class="border-bottom"></div>
-    <div class="border-left"></div>  
--->
-    
 
-  <div class="dark-contain-h">  
 <header>
   
 
@@ -45,14 +35,13 @@
       <nav class="nav"> 
         <ul>
             <li><a href="index.php">Home</a></li>
-            <li><a href="#">Work</a>
+            <li><a href="work.php">Work</a>
             </li>
             <li><a href="about.php">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="contact.php">Contact</a></li>
         </ul>
         </nav>
 
 
 
 </header>
-   </div> <!-- END OF DARK CONTAIN -->

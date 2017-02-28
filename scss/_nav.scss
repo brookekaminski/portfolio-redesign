@@ -21,9 +21,9 @@
                 flex: 0 1 auto;
             }
             a {
-                background-color: #f8f8f8;
+                padding: 20px 0;
+                background-color: $white;
                 display: block;
-                padding: 20px 35px;
                 text-decoration: none;
                 text-align: center;
                 text-transform: lowercase;
@@ -36,7 +36,7 @@
                     background-color: transparent;
                 }
                 @media #{$medium-width} {
-                    color: $bg;
+                    color: $text;
                 }
                 &:hover {
                     background-color: $light;
@@ -45,12 +45,6 @@
                         color: $light;
                     }
                 }
-                @media #{$max-width} {
-                    color: $text;
-                    &:hover{
-                        color: $light;
-                    }
-                } 
             }
         }
     }

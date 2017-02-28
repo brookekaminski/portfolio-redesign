@@ -4,7 +4,9 @@ $text: #1A1A1A;
 $light: #EEE;
 $dark: #606060;
 
-$sans: "ff-good-headline-web-pro-con", sans-serif;
+$white: #f8f8f8;
+
+$sans: "ff-good-headline-web-pro-con", 'Good Headline Pro', sans-serif;
 
 $serif: 'Crimson Text', serif;
 
@@ -21,24 +23,6 @@ $max-width: "screen and (min-width: 1200px)";
     text-transform: uppercase;
     font-weight: $weight;
     letter-spacing: $space;
-}
-
-@mixin border-h($thickness: 0px) {
-    z-index: 10;
-    position: fixed;
-    height: $thickness;
-    width: 100%;
-    background-color: $text;
-    transition: .5s ease;
-}
-
-@mixin border-v($thickness: 0px) {
-    z-index: 9;
-    position: fixed;
-    height: 100%;
-    width: $thickness;
-    background-color: $text;
-    transition: .5s ease;
 }
 
 @mixin button{

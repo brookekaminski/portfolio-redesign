@@ -3,63 +3,19 @@
 /* CSS Document */
 
 
-/* ------------------------------- */
-
-
-/* ------------ RESET ------------ */
-
-
-/* ------------------------------- */
+/* ------------------------------- 
+             RESET
+ ------------------------------- */
 
 @import "reset";
 
-/* ------------------------------ */
 
-
-/* -------- ACCESSIBILITY ------- */
-
-
-/* ------------------------------ */
+/* ------------------------------ 
+        ACCESSIBILITY 
+------------------------------ */
 
 @import 'vars';
 @import 'accessibility';
-
-/* ------------------------------ 
-          TEMP STYLES
--------------------------------- */
-
-.border-top {
-    @include border-h;
-    top: 0;
-    @media #{$medium-width} {
-        @include border-h(10px);
-    }
-}
-
-.border-right {
-    @include border-v;
-    right: 0;
-    @media #{$medium-width} {
-        @include border-v(10px);
-    }
-}
-
-.border-bottom {
-    @include border-h;
-    bottom: 0;
-    @media #{$medium-width} {
-        @include border-h(10px);
-    }
-}
-
-.border-left {
-    @include border-v;
-    left: 0;
-    @media #{$medium-width} {
-        @include border-v(10px);
-    }
-}
-
 
 /* ------------------------------ 
             GENERAL
@@ -81,17 +37,19 @@ p {
 }
 
 header {
+    background:{
+        image: url('../images/header-test.png');
+        repeat: no-repeat;
+        size: cover;
+    }
     position: relative;
+    transition: .3s ease;
     @media #{$small-width} {
+        background: none;
         display: flex;
         justify-content: space-between;
     }
-    @media #{$medium-width} {
-        background: $text;
-    }
     @media #{$max-width} {
-        background-color: $bg;
-        color: $text;
         margin: 0 auto;
         max-width: 1200px;
     }
@@ -108,29 +66,20 @@ a.logo {
     &:hover {
         color: $text;
     }
-    @media #{$medium-width} {
-        color: $dark;
-        &:hover {
-            color: $bg;
-        }
-    }
-    @media #{$max-width} {
-        color: $light;
-        &:hover {
-            color: $text;
-        }
-    }
     span {
         color: $text;
         transition: .3s ease;
-        @media #{$medium-width} {
-            color: $bg;
-        }
-        @media #{$max-width} {
-            color: $text;
-        }
     }
 }
+
+.clear{
+    clear: both;
+}
+
+
+/* ------------------------------ 
+          TEXT
+-------------------------------- */
 
 h2 {
     display: inline-block;
@@ -143,11 +92,18 @@ h2 {
     }
 }
 
+h3{
+  @include sans;
+}
+
+h3.view{
+    margin: 40px 0 0;
+}
+
 p {
     margin: 30px 0;
     font-family: $serif;
     font-size: 1.05em;
-    color: $dark;
 }
 
 span.underline {
@@ -163,6 +119,9 @@ span.underline {
         width: 200px;
         margin: 20px 30%;
     }
+    @media #{$max-width} {
+        margin: 20px 28%;
+    }
 }
 
 span.bold {
@@ -170,18 +129,6 @@ span.bold {
     color: $text;
 }
 
-//.dark-contain-h{
-//     @media #{$medium-width} {
-//    background: $text;
-//    }
-//}
-//.dark-contain-h {
-//    border-bottom: 2px solid $text;
-//}
-//
-//.dark-contain{
-//    background: $text;
-//}
 
 /* ------------------------------ 
           NAVIGATION
@@ -194,19 +141,19 @@ span.bold {
 -------------------------------- */
 
 .intro {
-    margin: 75px 15%;
+    margin: 100px 15%;
     @media #{$small-width} {
-        margin: 100px 15%;
+        margin: 125px 15%;
     }
     @media #{$medium-width} {
         display: flex;
         justify-content: space-between;
-        margin: 75px 0;
+        margin: 100px 0;
         @media #{$large-width} {
-            margin: 100px 0;
+            margin: 125px 0;
         }
         @media #{$max-width} {
-            margin: 100px auto;
+            margin: 150px auto;
             max-width: 1200px;
         }
         .intro-container {
@@ -225,100 +172,8 @@ span.bold {
     }
 }
 
-
 /* ------------------------------ 
-          HOME - PROJECTS
--------------------------------- */
-
-.projects {
-    background-color: $text;
-    color: $bg;
-    @media #{$medium-width} {
-        display: flex;
-        flex-direction: row-reverse;
-        .project-intro {
-            flex: 1 0 0;
-        }
-        .previews {
-            flex: 2 0 0;
-            @media #{$large-width} {
-                flex: 1 0 0;
-            }
-        }
-    }
-    @media #{$max-width} {
-        background-color: $bg;
-        color: $text;
-        margin: 100px auto;
-        max-width: 1200px;
-    }
-}
-
-.project-intro {
-    padding: 50px 15%;
-    @media #{$small-width} {
-        padding: 100px 15%;
-    }
-    @media #{$medium-width} {
-        padding: 50px 10%;
-    }
-    @media #{$large-width} {
-        padding: 75px 10%;
-    }
-    span.underline {
-        border-bottom: 2px solid $bg;
-        @media #{$max-width} {
-            border-bottom: 2px solid $text;
-        }
-    }
-}
-
-.previews {
-    display: flex;
-    flex-wrap: wrap;
-    .col {
-        background: $bg;
-        flex: 0 1 50%;
-        text-align: center;
-        //        border-bottom: 2px solid $text;
-        //        &:nth-child(even) {
-        //            border-left: 2px solid $text;
-        //        }
-    }
-    .box {
-        background: {
-            image: url('../images/group-project.jpg');
-            size: cover;
-            repeat: no-repeat;
-        }
-        position: relative;
-        height: 0;
-        padding-top: 100%;
-    }
-    .text {
-        padding: 5%;
-    }
-    .box img,
-    .box .text {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        //        background: $bg;
-        color: $text;
-        //        opacity: 1;
-        transition: opacity .25s ease;
-        //        &:hover{
-        //            opacity: 1;
-        //        }
-    }
-}
-
-
-/* ------------------------------ 
-          HOME - CONTACT
+            CONTACT
 -------------------------------- */
 
 .contact {
@@ -331,7 +186,7 @@ span.bold {
         margin: 85px 10% 115px 7%;
     }
     @media #{$max-width} {
-        margin: 85px auto 115px;
+        margin: 150px auto 115px;
         max-width: 1200px;
     }
     a {
@@ -351,7 +206,7 @@ span.bold {
 
 
 /* ------------------------------ 
-          HOME - FORM
+            FORM
 -------------------------------- */
 
 .form {
@@ -389,17 +244,26 @@ span.bold {
            FOOTER
 -------------------------------- */
 
+.dark-contain{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: $text;
+}
+
 footer {
-    padding: 25px 5% 100px;
+    width: 100%;
+    padding: 25px 5% 50px;
     background: $text;
-    @media #{$max-width} {
-        background-color: $bg;
-    }
+    color: $bg;
+//    @media #{$max-width} {
+//        background-color: $bg;
+//    }
     a {
         color: $bg;
-        @media #{$max-width} {
-            color: $text;
-        }
+//        @media #{$max-width} {
+//            color: $text;
+//        }
     }
     @media #{$max-width} {
         margin: 0 auto;
@@ -419,4 +283,8 @@ ul.social {
             color: $dark;
         }
     }
+}
+
+.connect{
+    padding: 20px 0;
 }

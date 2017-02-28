@@ -6,7 +6,6 @@
     </footer>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 <script src="scripts/script.js"></script>
 </body>
 

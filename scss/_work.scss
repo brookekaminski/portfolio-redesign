@@ -2,24 +2,59 @@
     margin: 75px 0 0;
 }
 
+span.tools {
+    float: right;
+    font-size: .9em;
+    //    color: cornflowerblue;
+}
+
 .project-desc {
     margin: 0 15%;
-    
-    a{
-        @include button;
-        @include sans;
-        margin-bottom: 20px;
-    }
+}
+
+.button {
+    @include button;
+    @include sans;
+    margin-bottom: 20px;
 }
 
 .screenshots {
-    margin: 50px 15%;
+    margin: 75px 15% 50px;
     img {
         @media #{$small-width} {
             margin-bottom: 10px;
         }
         @media #{$medium-width} {
             margin-bottom: 20px;
+        }
+    }
+}
+
+.mobile {
+    @media #{$small-width} {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+}
+
+.next-prev {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15% 50px;
+    a {
+        border-bottom: 2px solid $text;
+    }
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 15%;
+    img {
+        margin-bottom: 20px;
+        @media #{$medium-width} {
+            width: 50%;
         }
     }
 }
