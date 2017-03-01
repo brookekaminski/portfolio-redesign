@@ -32,12 +32,13 @@ $max-width: "screen and (min-width: 1200px)";
     font-size: 1.1em;
     color: $text;
     border: 2px solid $text;
+//    border: none;
     transition: .3s ease;
     &:hover,
     &:active,
     &:focus{
-        background: $text;
-        color: $bg;
+        background: rgba($color, .3);
+        border: 2px solid transparent;
     }
 }
 

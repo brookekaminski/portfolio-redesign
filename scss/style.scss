@@ -63,7 +63,7 @@ a {
 
 a.logo {
     display: inline-block;
-    margin: 20px;
+    margin: 30px;
     @include sans(.4em, 500);
     line-height: 1.2;
     font-size: 1.8em;
@@ -72,7 +72,9 @@ a.logo {
     &:hover,
     &:active,
     &:focus {
+        cursor: pointer;
         color: $text;
+        
     }
     span {
         color: $text;
@@ -197,7 +199,7 @@ span.bold {
         margin: 85px 10% 115px 7%;
     }
     @media #{$max-width} {
-        margin: 150px auto 115px;
+        margin: 150px 10% 115px;
         max-width: 1200px;
     }
     a {
@@ -211,6 +213,7 @@ span.bold {
         flex: 1 0 0;
     }
     @media #{$large-width} {
+        margin-left: 10%;
         flex: 2 0 0;
     }
 }
@@ -221,6 +224,7 @@ span.bold {
 -------------------------------- */
 
 .form {
+    margin-right: 5%;
     padding-top: 30px;
     @media #{$medium-width} {
         flex: 2 0 0;
