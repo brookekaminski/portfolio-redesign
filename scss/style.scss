@@ -28,6 +28,7 @@ body {
 }
 
 header {
+    padding-bottom: 150px;
     background:{
         image: url('../images/header-test.png');
         repeat: no-repeat;
@@ -203,8 +204,15 @@ span.bold {
         max-width: 1200px;
     }
     a {
-        display: block;
-        text-align: center;
+        display: inline-block;
+        border-bottom: 2px solid $text;
+            @include transition;
+            &:hover, 
+            &:active,
+            &:focus{
+                 color: $color;
+                 border-bottom: 2px solid $color;
+            }
     }
 }
 
@@ -213,7 +221,7 @@ span.bold {
         flex: 1 0 0;
     }
     @media #{$large-width} {
-        margin-left: 10%;
+        margin-left: 5%;
         flex: 2 0 0;
     }
 }

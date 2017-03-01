@@ -22,6 +22,13 @@
 </head>
 
 <body class="wrapper"> <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+   
+       <div class="border-top"></div>
+    <div class="border-right"></div>
+    <div class="border-bottom"></div>
+    <div class="border-left"></div>
+   
     <header> <a class="logo" href="index.php"><h1><span>B</span>ro<br>o<span>K</span>e</h1></a>
         <nav class="nav">
             <ul>

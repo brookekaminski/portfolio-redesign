@@ -8,7 +8,7 @@ include 'header.php';
             <div class="title">
                 <h2>Work</h2> </div> <span class="underline"></span>
             <section class="project-desc">
-                  <p>Here's a look at some of the projects I did in school. I'm showcasing a few to show my range of skills, from working with external clients to being left to my imagination to create whatever vision I had...</p> 
+                  <p>Take a look at some of the projects I did in school. I'm showcasing a few to show my range of skills, from working with external clients to being left to my imagination to create whatever vision I had...</p> 
             </section>
                 <section class="gallery">
 
