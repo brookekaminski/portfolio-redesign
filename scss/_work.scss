@@ -1,3 +1,7 @@
+.project-desc {
+    margin: 0 15% 50px;
+}
+
 // project title 
 .title {
     margin: 75px 0 0;
@@ -9,10 +13,6 @@ span.tools {
     font-size: .9em;
 }
 
-.project-desc {
-    margin: 0 15%;
-}
-
 // view live button
 .button {
     @include button;
@@ -22,8 +22,8 @@ span.tools {
 
 // images of work 
 .screenshots {
-    margin: 75px 15% 50px;
     img {
+        @include shadow;
         @media #{$small-width} {
             margin-bottom: 10px;
         }
@@ -35,10 +35,20 @@ span.tools {
 
 // mobile images
 .mobile {
+    margin: 20px 15% 0;
     @media #{$small-width} {
         display: flex;
         justify-content: space-between;
-        
+    }
+    img {
+        @include shadow;
+        max-width: 200px;
+        @media #{$small-width} {
+            margin-bottom: 20px;
+        }
+        @media #{$medium-width} {
+            margin-bottom: 30px;
+        }
     }
 }
 
@@ -50,33 +60,42 @@ span.tools {
     a {
         border-bottom: 2px solid $text;
         @include transition;
-        &:hover{
-            color: $color;
-            border-bottom: 2px solid $color;
+        &:hover {
+            color: rgba($colour, .3);
+            border-bottom: 2px solid transparent;
         }
     }
 }
 
 // gallery of work
 .gallery {
-    a{
-        display: flex;
-        margin: 20px 0;
-        padding: 20px;
+    a {
+        margin: 0 0 30px;
+        @include button;
         @include sans;
-//        border: 7px solid rgba($color, .3);
-        @include transition;
-        @media #{$medium-width} {
-            width: 80%;
-        }
-        &:hover,
-        &:active,
-        &:focus{
-            background-color: rgba($color, .3);
-//            color: $bg;
-//            border: 7px solid transparent;
-        }
-    
+        font-size: .95em;
+        padding: 8px 15px;
+        background: $bg;
+        cursor: pointer;
     }
-    margin: 75px 15% 100px;
+    p {
+        margin: 5px 0 10px;
+    }
+    margin: 50px 15% 100px;
+    span {
+        color: rgba($colour, .3);
+    }
+    @media #{$small-width} {
+        width: 50%;
+    }
+    @media #{$medium-width} {
+        width: 35%;
+    }
+}
+
+.preview {
+    padding: 80px 15px 25px;
+    text-align: center;
+    color: $text;
+    border: 7px solid rgba($colour, .3);
 }

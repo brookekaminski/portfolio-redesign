@@ -2,19 +2,48 @@
 
 /* CSS Document */
 
-
 /* ------------------------------- 
              RESET
  ------------------------------- */
 
 @import "reset";
 
+/* ------------------------------- 
+           VARIABLES
+ ------------------------------- */
+
+@import 'vars';
+
+/* ------------------------------- 
+             FONTS
+ ------------------------------- */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?lmyewl');
+  src:  url('../fonts/icomoon.eot?lmyewl#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?lmyewl') format('truetype'),
+    url('../fonts/icomoon.woff?lmyewl') format('woff'),
+    url('../fonts/icomoon.svg?lmyewl#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+        font-family: $icon;
+        content: attr(data-icon);
+        speak: none;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+    }
 
 /* ------------------------------ 
         ACCESSIBILITY 
 ------------------------------ */
 
-@import 'vars';
 @import 'accessibility';
 
 /* ------------------------------ 
@@ -22,15 +51,14 @@
 -------------------------------- */
 
 body {
-    position: relative;
     font-family: $sans;
     line-height: 1.5;
 }
 
 header {
-    padding-bottom: 150px;
     background:{
         image: url('../images/header-test.png');
+        position: top -110px left 50px;
         repeat: no-repeat;
         size: cover;
     }
@@ -39,9 +67,10 @@ header {
     @media #{$small-width} {
         display: flex;
         justify-content: space-between;
+        background: none;      
     }
-    @media #{$large-width}{
-        background: none;
+    @media #{$medium-width} {
+        margin-top: 10px;
     }
     @media #{$max-width} {
         margin: 0 auto;
@@ -54,6 +83,13 @@ a {
     color: $text;
 }
 
+.home .home-link,
+.work .work-link,
+.about .about-link,
+.contact .contact-link{
+    color: rgba($colour, .3);
+}
+
 .clear{
     clear: both;
 }
@@ -62,13 +98,14 @@ a {
             LOGO
 -------------------------------- */
 
+// brooke logo
 a.logo {
     display: inline-block;
     margin: 30px;
     @include sans(.4em, 500);
     line-height: 1.2;
     font-size: 1.8em;
-    color: rgba($color, .1); //$light;
+    color: rgba($colour, .1); //$light;
     @include transition;
     &:hover,
     &:active,
@@ -102,10 +139,6 @@ h3{
   @include sans;
 }
 
-h3.view{
-    margin: 40px 0 0;
-}
-
 p {
     margin: 30px 0;
     font-family: $serif;
@@ -113,11 +146,13 @@ p {
     font-size: 1.05em;
 }
 
+
+// bottom underline 
 span.underline {
     display: flex;
     width: 100px;
     margin: 20px 50%;
-    border-bottom: 7px solid rgba($color, .3);
+    border-bottom: 7px solid rgba($colour, .3);
     @media #{$small-width} {
         width: 150px;
         margin: 20px 40%;
@@ -148,7 +183,7 @@ span.bold {
 -------------------------------- */
 
 .intro {
-    margin: 100px 15%;
+    margin: 100px 15%; 
     @media #{$small-width} {
         margin: 125px 15%;
     }
@@ -164,7 +199,6 @@ span.bold {
             max-width: 1200px;
         }
         .intro-container {
-            //            width: calc((100%/2));
             margin-right: 10%;
             &:first-child {
                 flex: 1 0 0;
@@ -180,24 +214,30 @@ span.bold {
         &:hover,
         &:active,
         &:focus{
-            color: $color;
-            border-bottom: 2px solid $color;
+            color: rgba($colour, .3);
+            border-bottom: 2px solid transparent;
         }
     }
 }
 
 /* ------------------------------ 
+            WORK
+-------------------------------- */
+
+@import 'work';
+
+/* ------------------------------ 
             CONTACT
 -------------------------------- */
 
-.contact {
+.contact-page {
     margin: 75px 15% 100px;
     @media #{$small-width} {
         margin: 85px 15% 115px;
     }
     @media #{$medium-width} {
         display: flex;
-        margin: 85px 10% 115px 7%;
+        margin: 85px 7% 115px 10%;
     }
     @media #{$max-width} {
         margin: 150px 10% 115px;
@@ -210,8 +250,8 @@ span.bold {
             &:hover, 
             &:active,
             &:focus{
-                 color: $color;
-                 border-bottom: 2px solid $color;
+                 color: rgba($colour, .3);
+                 border-bottom: 2px solid transparent;
             }
     }
 }
@@ -236,7 +276,7 @@ span.bold {
     padding-top: 30px;
     @media #{$medium-width} {
         flex: 2 0 0;
-        padding-left: 10%;
+        padding-left: 15%;
     }
 }
 
@@ -256,22 +296,14 @@ span.bold {
     }
 }
 
-
-/* ------------------------------ 
-           WORK
--------------------------------- */
-
-@import 'work';
-
 /* ------------------------------ 
            FOOTER
 -------------------------------- */
 
 footer {
-    border-top: 7px solid rgba($color, .3);
+    border-top: 7px solid rgba($colour, .3);
     width: 100%;
     padding: 25px 5% 50px;
-//    background: rgba($color, .3);
     color: $text;
     @media #{$small-width} {
         display: flex;
@@ -286,25 +318,28 @@ footer {
     }
 }
 
+
+// footer icons
 ul.social {
     display: flex;
     margin-top: 20px;
-    .fa {
+    .icon {
         margin: 0 1em 0 .75em;
         color: $text;
         @include transition;
+        font-family: $icon;
         font-size: 1.2em;
         &:hover,
         &:active,
         &:focus {
             cursor: pointer;
-            color: rgba($color, .3);
-            transform: scale(1.2);
+            color: rgba($colour, .3);
             
         }
     }
 }
 
+// footer email
 .connect{
     margin-left: 10px;
     padding: 20px 0;
@@ -314,8 +349,8 @@ ul.social {
         &:hover, 
         &:active,
         &:focus{
-             color: $color;
-             border-bottom: 2px solid $color;
+             color: rgba($colour, .3);
+             border-bottom: 2px solid transparent;
         }
     }
 }

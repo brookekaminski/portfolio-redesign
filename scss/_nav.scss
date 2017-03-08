@@ -46,7 +46,7 @@
                     background-color: $light;
                     @media #{$small-width} {
                         background-color: transparent;
-                        color: rgba($color, .3);
+                        color: rgba($colour, .3);
                     }
                 }
             }

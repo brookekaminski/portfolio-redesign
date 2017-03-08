@@ -1,4 +1,8 @@
-<?php include ('header.php'); ?>
+<?php 
+$bodyClass = 'home';
+$pageTitle = ' | Home';
+include ('header.php'); 
+?>
     <main id="content" class="content">
         <div class="intro">
             <div class="intro-container">

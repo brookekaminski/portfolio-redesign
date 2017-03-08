@@ -1,14 +1,20 @@
+// colors
 $bg: #FFF;
 $text: #1A1A1A;
-$color: #4175C0;
+$colour: #4175C0;
 
 $light: #EEE;
 $white: #F8F8F8;
+
+// fonts
 
 $sans: "ff-good-headline-web-pro-con", 'Good Headline Pro', 'Open Sans Condensed', sans-serif;
 
 $serif: 'Crimson Text', serif;
 
+$icon: 'icomoon';
+
+// media queries
 $small-width: "screen and (min-width: 525px)";
 
 $medium-width: "screen and (min-width: 768px)";
@@ -16,6 +22,10 @@ $medium-width: "screen and (min-width: 768px)";
 $large-width: "screen and (min-width: 960px)";
 
 $max-width: "screen and (min-width: 1200px)";
+
+/* ------------------------------- 
+           MIXINS
+ ------------------------------- */
 
 @mixin sans($space: .1em, $weight: 900){
     font-family: $sans;
@@ -27,17 +37,17 @@ $max-width: "screen and (min-width: 1200px)";
 @mixin button{
     float: right;
     display: inline-block;
-    padding: 10px 40px;
+    padding: 10px 30px;
     background: none;
     font-size: 1.1em;
     color: $text;
     border: 2px solid $text;
-//    border: none;
     transition: .3s ease;
     &:hover,
     &:active,
     &:focus{
-        background: rgba($color, .3);
+        background: $text;
+        color: $bg;
         border: 2px solid transparent;
     }
 }
@@ -46,4 +56,16 @@ $max-width: "screen and (min-width: 1200px)";
     -webkit-transition: .3s ease;
     -o-transition: .3s ease;
     transition: .3s ease;
+}
+
+@mixin shadow{
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,.17);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,.17);
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,.17);
+}
+
+@mixin preview($image){
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: $image;
 }

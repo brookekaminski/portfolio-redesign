@@ -1,5 +1,6 @@
 <?php 
-
+$bodyClass = 'about';
+$pageTitle = ' | About';
 include 'header.php';
 
 ?>
