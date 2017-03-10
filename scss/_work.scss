@@ -23,7 +23,6 @@ span.tools {
 // images of work 
 .screenshots {
     img {
-        @include shadow;
         @media #{$small-width} {
             margin-bottom: 10px;
         }
@@ -33,22 +32,110 @@ span.tools {
     }
 }
 
+.section-titles {
+    justify-content: flex-start;
+    margin: 40px 0 20px;
+}
+
+.details{
+    margin-bottom: 20px;
+    p{
+        margin: 0 10px 30px;
+    }
+}
+
+.wireframes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media #{$small-width} {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    img{
+        margin: 10px 5% 0;
+        @media #{$small-width} {
+            margin: 10px 2.5% 20px;
+        }
+        &:first-child{
+            max-width: 200px;
+        }
+        &:last-child{
+            width: 500px;
+        }
+    }
+}
+
 // mobile images
 .mobile {
-    margin: 20px 15% 0;
-    @media #{$small-width} {
-        display: flex;
-        justify-content: space-between;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0 0;
+    picture {
+        margin: 0 2%;
+        @media #{$small-width} {
+           margin: 0 5%;
+        }
+        @media #{$sm-med-width} {
+            margin: 0 2.5%;
+        }
+        @media #{$large-width} {
+             margin: 0 3%;
+        }
+                @media #{$max-width} {
+             margin: 0 5%;
+        }
     }
     img {
-        @include shadow;
         max-width: 200px;
+        margin-bottom: 10px;
         @media #{$small-width} {
             margin-bottom: 20px;
+            width: 125px;
+        }
+        @media #{$sm-med-width} {
+            width: 175px;
         }
         @media #{$medium-width} {
             margin-bottom: 30px;
+            width: 200px;
         }
+    }
+}
+
+.tablet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+}
+
+.desktop{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+        @media #{$small-width} {
+        flex-direction: row;
+        justify-content: center;
+    }
+    img{
+        align-self: center;
+        margin: 10px 5% 0;
+        max-width: 350px;
+        @media #{$small-width} {
+            margin: 10px 2.5% 20px;
+        }
+    }
+}
+
+.logos{
+    display: flex;
+    justify-content: center;
+    img{
+        margin: 0 5%;
+        box-shadow: none;
     }
 }
 
@@ -58,6 +145,7 @@ span.tools {
     justify-content: space-between;
     margin: 0 15% 50px;
     a {
+        font-style: italic;
         border-bottom: 2px solid $text;
         @include transition;
         &:hover {
@@ -94,7 +182,8 @@ span.tools {
 }
 
 .preview {
-    padding: 80px 15px 25px;
+    margin-bottom: 35px;
+    padding: 25px 15px;
     text-align: center;
     color: $text;
     border: 7px solid rgba($colour, .3);

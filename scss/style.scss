@@ -69,13 +69,14 @@ header {
         justify-content: space-between;
         background: none;      
     }
-    @media #{$medium-width} {
-        margin-top: 10px;
-    }
     @media #{$max-width} {
-        margin: 0 auto;
+        margin: 10px auto 0;
         max-width: 1200px;
     }
+}
+
+img{
+    @include shadow;
 }
 
 a {
@@ -209,6 +210,7 @@ span.bold {
         }
     }
     a {
+        font-style: italic;
         border-bottom: 2px solid $text;
         @include transition;
         &:hover,
@@ -244,7 +246,9 @@ span.bold {
         max-width: 1200px;
     }
     a {
+        float: right;
         display: inline-block;
+        font-style: italic;
         border-bottom: 2px solid $text;
             @include transition;
             &:hover, 
@@ -344,6 +348,7 @@ ul.social {
     margin-left: 10px;
     padding: 20px 0;
     a{
+        font-style: italic;
         border-bottom: 2px solid $text;
         @include transition;
         &:hover, 
