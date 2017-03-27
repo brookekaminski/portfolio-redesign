@@ -27,4 +27,9 @@ input[type="submit"] {
     @include button;
     @include sans;
     @include transition;
+    padding: 10px 35px;
+}
+
+input[type=text]:focus, textarea:focus {
+  border-bottom: 2px solid transparent;
 }

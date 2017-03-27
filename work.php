@@ -30,6 +30,7 @@ include 'header.php';
             <div class="clear"></div>
             <h3>Landing Page</h3>
             <div class="preview"> 
+<!--            <img src="images/lp-preview.svg" alt="">-->
             <a href="landing-page.php">View Details</a> 
             </div>
         </section>

@@ -49,7 +49,7 @@ include ('header.php');
             </section>
 -->
             <section class="details">
-                <h3 class="section-titles">Security</h3> </section> <a class="button" href="https://github.com/brookekaminski/portfolio-redesign">View Code<span class="screen-reader-text"> external link to portfolio project on github</span></a>
+                <h3 class="section-titles">Security</h3> </section> <a class="button" href="https://github.com/brookekaminski/portfolio-redesign" target="_blank">View Code<span class="screen-reader-text"> external link to portfolio project on github</span></a>
             <div class="clear"></div>
         </article>
         <div class="next-prev"> <a href="client-project.php">Previous Project</a> <a href="london-fog.php">Next Project</a> </div>

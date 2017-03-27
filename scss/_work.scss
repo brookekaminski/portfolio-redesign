@@ -186,5 +186,11 @@ span.tools {
     padding: 25px 15px;
     text-align: center;
     color: $text;
-    border: 7px solid rgba($colour, .3);
+//    border: 7px solid rgba($colour, .3);
+    background-color: rgba($colour, .3);
+//    
+//    img{
+//        box-shadow: none;
+//    max-width: 100px;
+//    }
 }

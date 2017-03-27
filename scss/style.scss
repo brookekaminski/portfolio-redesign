@@ -46,6 +46,12 @@
 
 @import 'accessibility';
 
+
+*:focus{
+    outline: rgba($colour, .3) solid 4px;
+
+}
+
 /* ------------------------------ 
             GENERAL
 -------------------------------- */
@@ -145,6 +151,12 @@ p {
     font-family: $serif;
     text-align: justify;
     font-size: 1.05em;
+    &::selection {
+        background: rgba($colour, .3);
+    }
+    &::-moz-selection{
+       background: rgba($colour, .3); 
+    }
 }
 
 
@@ -285,6 +297,16 @@ span.bold {
 }
 
 @import 'form';
+
+.error{
+    @include sans;
+    font-size: 1em;
+}
+
+.success{
+    @extend .error;
+    color: rgba($colour, .3);
+}
 
 /* ------------------------------ 
             ABOUT
