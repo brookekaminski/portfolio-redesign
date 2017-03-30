@@ -5,7 +5,7 @@ include 'header.php';
 
 // contact form secure from Jem's PHP Mail Form
 
-$yourEmail = "hello@brookekaminski.ca";
+$yourEmail = "brookemkaminski@gmail.com";
 $maxPoints = 4;
 $requiredFields = "name,email,message";
 
@@ -119,7 +119,7 @@ function get_data($var) {
         <section class="contact-page" id="contact-page">
             <div class="contact-intro">
                 <h2>Get in Touch</h2> <span class="underline"></span>
-                <p>I hope you were able to get to know me a little better through here but if you want to find out more then I'd love to hear from you!</p> <a href="mailto:hello@brookekaminski.ca">hello@brookekaminski.ca<span class="screen-reader-text"> to email message</span></a> </div>
+                <p>I hope you were able to get to know me a little better through here but if you want to find out more then I'd love to hear from you!</p> <a href="mailto:hello@brookekaminski.ca">hello [at] brookekaminski.ca<span class="screen-reader-text"> to email message</span></a> </div>
             <div class="form">
                     <?php
 if (!empty($error_msg)) {

@@ -37,14 +37,14 @@ span.tools {
     margin: 40px 0 20px;
 }
 
-.details{
+.details {
     margin-bottom: 20px;
-    p{
+    p {
         margin: 0 10px 30px;
     }
 }
 
-.wireframes{
+.wireframes {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,15 +53,15 @@ span.tools {
         justify-content: center;
         flex-wrap: wrap;
     }
-    img{
+    img {
         margin: 10px 5% 0;
         @media #{$small-width} {
             margin: 10px 2.5% 20px;
         }
-        &:first-child{
+        &:first-child {
             max-width: 200px;
         }
-        &:last-child{
+        &:last-child {
             width: 500px;
         }
     }
@@ -76,16 +76,16 @@ span.tools {
     picture {
         margin: 0 2%;
         @media #{$small-width} {
-           margin: 0 5%;
+            margin: 0 5%;
         }
         @media #{$sm-med-width} {
             margin: 0 2.5%;
         }
         @media #{$large-width} {
-             margin: 0 3%;
+            margin: 0 3%;
         }
-                @media #{$max-width} {
-             margin: 0 5%;
+        @media #{$max-width} {
+            margin: 0 5%;
         }
     }
     img {
@@ -105,35 +105,61 @@ span.tools {
     }
 }
 
-.tablet{
+.nav-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+        max-width: 300px;
+        margin-bottom: 10px;
+    }
+}
+
+.tablet {
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 500px;
 }
 
-.desktop{
+.desktop {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-        @media #{$small-width} {
+    @media #{$small-width} {
         flex-direction: row;
         justify-content: center;
     }
-    img{
+    img {
+        width: 98%;
         align-self: center;
         margin: 10px 5% 0;
         max-width: 350px;
         @media #{$small-width} {
+            width: 70%;
             margin: 10px 2.5% 20px;
         }
     }
 }
 
-.logos{
+.cp-desktop{
+    @extend .desktop;
+    img{
+       width: 98%;
+        align-self: center;
+        margin: 10px 5% 0;
+        max-width: 350px;
+        @media #{$small-width} {
+            width: 95%;
+            margin: 10px 2.5% 20px;
+        } 
+    }
+}
+
+.logos {
     display: flex;
     justify-content: center;
-    img{
+    img {
         margin: 0 5%;
         box-shadow: none;
     }
@@ -157,8 +183,45 @@ span.tools {
 
 // gallery of work
 .gallery {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 50px 15% 100px;
+    h3 {
+        margin-bottom: 5px;
+    }
+    p {
+        margin: 5px 0 10px;
+    }
+    span {
+        color: rgba($colour, .3);
+    }
+    img {
+        @media #{$small-width} {
+            margin-left: 10%;
+            width: 80%;
+        }
+    }
+    @media #{$small-width} {
+        margin-left: 15%;
+        width: 70%;
+    }
+        @media #{$medium-width} {
+            flex-direction: row;
+            flex-wrap: wrap;
+    }
+}
+
+.work-prev{
+    @media #{$medium-width} {
+        margin: 0 5%;
+          width: calc(80%/2);
+    }
+}
+
+.gallery .preview {
     a {
-        margin: 0 0 30px;
+        margin: 5px 0 30px;
         @include button;
         @include sans;
         font-size: .95em;
@@ -166,31 +229,4 @@ span.tools {
         background: $bg;
         cursor: pointer;
     }
-    p {
-        margin: 5px 0 10px;
-    }
-    margin: 50px 15% 100px;
-    span {
-        color: rgba($colour, .3);
-    }
-    @media #{$small-width} {
-        width: 50%;
-    }
-    @media #{$medium-width} {
-        width: 35%;
-    }
-}
-
-.preview {
-    margin-bottom: 35px;
-    padding: 25px 15px;
-    text-align: center;
-    color: $text;
-//    border: 7px solid rgba($colour, .3);
-    background-color: rgba($colour, .3);
-//    
-//    img{
-//        box-shadow: none;
-//    max-width: 100px;
-//    }
 }
